@@ -18,7 +18,9 @@ That's it
 
 ## Sample output
 
-``` NMAP XML Outout (25Mb source file)
+NMAP XML Outout (25Mb source file)
+
+```
 nmaprun (startstr, version, xmloutputversion, scanner, start, args)
     debugging (level)
     scaninfo (services, type, numservices, protocol)
@@ -67,7 +69,9 @@ Since I try to keep the results human readable, it will stop recursing when it d
 
 My "final" solution was to not allow "ParentTag+CurrentTag" duplication within a single branch of a tree.  So a tag can be repeated, but only once per parent tag.
 
-``` embeded repetition example run across (see Nexpose example, below)
+embeded repetition example run across (see Nexpose example, below)
+
+``` 
                 ContainerBlockElement [has_text]
                     UnorderedList
                         ListItem [has_text]
@@ -101,7 +105,9 @@ This is not a perfect solution, but it keeps the output small enough while still
 
 ## More sample output
 
-```  Qualys Scanner XML Output (636Mb source file)
+Qualys Scanner XML Output (636Mb source file)
+
+```
 SCAN (value)
     HEADER
         ASSET_GROUPS
@@ -139,7 +145,9 @@ Below is an example that includes embeded repetition (removed for readability)
 
 The source file was 253Mb, but the script reduced it to a 200 line schema summary in about 30 seconds.  Editing out the repetition manually took about 30 seconds.
 
-``` Rapid7 Nexpose XML v2 output
+Rapid7 Nexpose XML v2 output
+
+``` 
 NexposeReport (version)
     VulnerabilityDefinitions
         vulnerability (added, cvssScore, severity, title, modified, cvssVector, pciSeverity, published, riskScore, id)
