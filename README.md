@@ -69,7 +69,7 @@ Since I try to keep the results human readable, it will stop recursing when it d
 
 My "final" solution was to not allow "ParentTag+CurrentTag" duplication within a single branch of a tree.  So a tag can be repeated, but only once per parent tag.
 
-### embeded repetition example run across (see Nexpose example, below)
+### embeded repetition example (from Nexpose example, below)
 
 ``` 
                 ContainerBlockElement [has_text]
@@ -141,11 +141,12 @@ SCAN (value)
         OS [has_text]
 ```
 
+### Rapid7 Nexpose XML v2 output
+
 Below is an example that includes embeded repetition (removed for readability)
 
 The source file was 253Mb, but the script reduced it to a 200 line schema summary in about 30 seconds.  Editing out the repetition manually took about 30 seconds.
 
-### Rapid7 Nexpose XML v2 output
 
 ``` 
 NexposeReport (version)
